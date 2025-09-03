@@ -1,3 +1,5 @@
+![Project Header](https://github.com/mayank1ahuja/da_ufc/blob/cd7636fe86d984715c6f2dcf15051eea842bc89c/project%20images/project%20header.png)
+
 <h1 align = "center"> UFC Query Lab: SQL Driven Visuals </h2>
 
 ## **Project Overview**
@@ -640,24 +642,17 @@ fig7 = px.line(
 This repository is a concise demonstration of practical data-work skill: robust ingestion of multiple CSVs, defensible cleaning choices, purposeful feature engineering, and SQL-first aggregation validated by programmatic checks. The visual layer is intentionally dual: **Seaborn** for crisp, static documentation; **Plotly** for interactive demonstration. Together they provide both technical rigor and presentation polish.
 
 ## **Requirements**
-> Python 3.8+
-> Jupyter Notebook or Jupyter Lab
-> Python Libraries: pandas, numpy, seaborn, matplotlib, plotly
-> PostgreSQL (optional if you want to run SQL step locally)
-> psycopg2 (if connecting Python to PostgreSQL)
+- Python 3.8+
+- Jupyter Notebook or Jupyter Lab
+- Python Libraries: pandas, numpy, seaborn, matplotlib, plotly
+- PostgreSQL (optional if you want to run SQL step locally)
+- psycopg2 (if connecting Python to PostgreSQL)
 
 ## **Limitations & Assumptions**
 - **Date quality:** date parsing uses `errors='coerce'`. The notebook documents how missing or invalid dates are handled.
 - **Imputation rules:** numeric coercion can introduce `NaN` values; the notebook’s cleaning cells explicitly list fill strategies (zeros, medians, or row drop).
 - **Client-side rendering limits:** Plotly is client-side; very large tables can degrade browser performance. Pre-aggregate in SQL for dashboard-ready outputs.  
 - **Reproducibility:** the notebook runs top→bottom in a recommended environment; changing package versions or not following the documented cleaning steps can produce different results. Use pinned dependencies for reproducible runs.
-
-## **Requirements**
-> Python 3.8+
-> Jupyter Notebook or Jupyter Lab
-> Python Libraries: pandas, numpy, seaborn, matplotlib, plotly
-> PostgreSQL (optional if you want to run SQL step locally)
-> psycopg2 (if connecting Python to PostgreSQL)
 
 ## **Future Scope**
 - **Predictive Modeling:**
@@ -668,3 +663,8 @@ Development of a Streamlit or Jupyter-based dashboard with filters by fighter, e
 
 - **Automated Data Refresh:**
 Implementation of a pipeline that ingests new fight, fighter, and event data as it becomes available. Ensures the analysis remains current, reproducible, and adaptable to future datasets, strengthening the project’s real-world applicability.
+
+## **Author -** *Mayank Ahuja*
+This project is part of my portfolio, demonstrating Python and SQL skills applied to a UFC dataset of events, fights and fighters, highlighting the ability to extract actionable insights from complex datasets.
+
+![UFC](https://github.com/mayank1ahuja/da_ufc/blob/cd7636fe86d984715c6f2dcf15051eea842bc89c/project%20images/ufc.jpg)
