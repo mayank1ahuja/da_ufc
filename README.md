@@ -174,6 +174,11 @@ ORDER BY count DESC
 LIMIT 20;
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_1.jpg' >
+</p>
+
+
 2. Distribution of Fighters by Weight Class
 ```sql
 -- Question 2 : What is the distribution of fighters by weight class?
@@ -183,6 +188,11 @@ FROM fighters
 GROUP BY COALESCE(weight_class, 'Unknown')
 ORDER BY n_fighters DESC;
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_2.jpg' >
+</p>
+
 
 3. Top Fighters by Win Ratio
 ```sql
@@ -197,6 +207,10 @@ ORDER BY win_ratio DESC
 LIMIT 20;
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_3.jpg' >
+</p>
+
 4. Number of Fights per Year
 ```sql
 -- Question 4 : What are the number of fights per year?
@@ -207,6 +221,10 @@ JOIN events e ON f.event_id = e.event_id
 GROUP BY year
 ORDER BY year;
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_4.jpg' >
+</p>
 
 5. Count of Finish Method
 ```sql
@@ -219,6 +237,10 @@ GROUP BY COALESCE(method,'Unknown')
 ORDER BY cnt DESC;
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_5.jpg' >
+</p>
+
 6. Win Ratios by Weight Class
 ```sql
 -- Question 6 : Define the win ratios by weight class.
@@ -230,6 +252,10 @@ GROUP BY weight_class
 HAVING COUNT(*) >= 5
 ORDER BY avg_win_ratio DESC;
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_6.jpg' >
+</p>
 
 7. Fights per Year with a 3-Year Moving Average
 ```sql
@@ -247,6 +273,10 @@ SELECT year,
 FROM per_year
 ORDER BY year;
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_7.jpg' >
+</p>
 
 8. Top Active Fighters per Year
 ```sql
@@ -276,6 +306,10 @@ WHERE r.rn <= 10
 ORDER BY r.year, r.fights_count DESC;
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_8.jpg' >
+</p>
+
 ## **Step 7: Data Visualisation**
 Data visualization on SQL query outputs using Seaborn and Plotly: Seaborn for polished, static charts suited to documentation and reporting; Plotly for interactive, dynamic visuals suited to exploration and presentations. A complementary approach, with Seaborn ensuring reproducibility and Plotly enhancing engagement.
 
@@ -300,6 +334,10 @@ plt.xlabel("Number of Fights")
 plt.ylabel("Finish Method")
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/seaborn%20plots/sns1.png' >
+</p>
+
 #### Plotly Plot
 ```python
 # Query 2: Distribution of Fighters by Weight Class (Plotly)
@@ -322,6 +360,10 @@ fig1 = px.bar(
 )
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty1.png' >
+</p>
+
 
 ### *Step 7(b): Visualising Query 2*
 
@@ -343,6 +385,10 @@ plt.pie(df2['n_fighters'], labels = df2['weight_class'], autopct = '%1.1f%%', co
 plt.title('Distribution of Fighters by Weight Class', fontsize=14)
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/seaborn%20plots/sns2.png' >
+</p>
+
 #### Plotly Plot
 ```python
 # Query 2: Distribution of Fighters by Weight Class (Plotly)
@@ -361,6 +407,10 @@ fig2 = px.pie(
     color_discrete_sequence = px.colors.qualitative.Set3
 )
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty2.png' >
+</p>
 
 ### *Step 7(c): Visualising Query 3*
 
@@ -382,6 +432,10 @@ plt.title('Top Fighters by Win Ratio', fontsize = 14, weight ='bold')
 plt.xlabel('Win Ratio')
 plt.ylabel('Fighter')
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/seaborn%20plots/sns3.png' >
+</p>
 
 #### Plotly Plot
 ```python
@@ -415,6 +469,9 @@ fig3.update_layout(
 
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty3.png' >
+</p>
 
 ### *Step 7(d): Visualising Query 4*
 
@@ -438,6 +495,10 @@ plt.xlabel('Year')
 plt.ylabel('Number of Fights')
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/seaborn%20plots/sns4.png' >
+</p>
+
 #### Plotly Plot
 ```python
 # Query 4: Number of Fights per Year (Plotly)
@@ -459,7 +520,9 @@ fig4 = px.line(
 )
 ```
 
-
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty4.png' >
+</p>
 
 ### *Step 7(e): Visualising Query 5*
 
@@ -483,6 +546,10 @@ plt.xlabel('% of All Fights')
 plt.ylabel('Method')
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/seaborn%20plots/sns5.png' >
+</p>
+
 #### Plotly Plot
 ```python
 # Query 5 : Finish Method Counts + Percentage (Plotly)
@@ -504,7 +571,9 @@ fig5 = px.bar(
 )
 ```
 
-
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty5.png' >
+</p>
 
 ### *Step 7(f): Visualising Query 6*
 
@@ -526,8 +595,11 @@ sns.scatterplot(df6, x = 'n_fighters', y = 'avg_win_ratio', size = 'n_fighters',
 plt.title('Win Ratios by Weight Class', fontsize = 14, weight = 'bold')
 plt.xlabel('Number of Fighters')
 plt.ylabel('Average Win Ratio')
-
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/seaborn%20plots/sns6.png' >
+</p>
 
 #### Plotly Plot
 ```python
@@ -549,6 +621,10 @@ fig6 = px.scatter(
 )
 ```
 
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty6.png' >
+</p>
+
 ### *Step 7(g): Visualising Query 7*
 
 #### Seaborn Plot
@@ -569,6 +645,10 @@ fig6 = px.scatter(
     title = 'Average Win Ratio by Weight Class',
     color_discrete_sequence = px.colors.qualitative.Bold
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/seaborn%20plots/sns7.png' >
+</p>
 
 #### Plotly Plot
 ```python
@@ -596,6 +676,10 @@ fig7 = px.line(
     color_discrete_sequence = ['#ff7f0e', '#2ca02c']
 )
 ```
+
+<p align="center">
+  <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty7.png' >
+</p>
 
 ---
 
