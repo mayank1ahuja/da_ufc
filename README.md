@@ -42,7 +42,7 @@ import plotly.io as pio
 ```
 
 ## **Step 1: Data Ingestion**  
-- Read each CSV with ```pd.read_csv()``` while appling safe flags like ```encoding_errors='ignore'``` and ```on_bad_lines='skip'``` to avoid any errors while loading the data.
+Read each CSV with ```pd.read_csv()``` while appling safe flags like ```encoding_errors='ignore'``` and ```on_bad_lines='skip'``` to avoid any errors while loading the data.
 ```python
 fighters = pd.read_csv("fighter_details.csv",
                         encoding_errors = 'ignore', 
