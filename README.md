@@ -63,7 +63,7 @@ Initial data exploration is the first glance at a dataset to understand its stru
 fighters.head()
 fighters.shape
 ``` 
-
+---
 
 ## **Step 2: Data Cleaning**  
 Data cleaning ensures that the dataset is accurate, consistent, and analysis-ready by handling missing values, correcting data types, removing duplicates, and standardizing formats. This step is crucial because reliable insights can only come from well-prepared, trustworthy data.
@@ -91,6 +91,7 @@ fighters['stance'] = fighters['stance'].astype('category')
 #typecasting in Events
 events['date'] = pd.to_datetime(events['date'])
 ```
+---
 
 ## **Step 3: Feature Engineering**  
 Feature engineering is the process of creating new, meaningful variables from raw data to better capture underlying patterns. It enhances the dataset’s predictive power and analytical depth, enabling more insightful exploration and stronger models.
@@ -140,6 +141,7 @@ fighters['win_ratio'] = fighters['wins'] / (fighters['wins'] + fighters['losses'
 ```python
 fighters["experience"] = fighters["wins"] + fighters["losses"] + fighters["draws"]
 ```
+---
 
 ## **Step 4: Exporting Cleaned Data**
 ```python 
@@ -147,6 +149,7 @@ fighters.to_csv("cleaned_fighters.csv", index=False)
 events.to_csv("cleaned_events.csv", index=False)
 fights.to_csv("cleaned_fights.csv", index=False)  
 ```
+---
 
 ## **Step 5: Connecting to PostgreSQL**
 ```python
@@ -159,6 +162,7 @@ conn = psycopg2.connect(
     password="password"
 )
 ```
+---
 
 ## **Step 6: Exploratory Data Analysis(EDA)**
 SQL-based EDA uses queries to summarize, filter, and aggregate data directly in the database. It allows efficient handling of large datasets, ensures reproducibility, and provides a reliable **reference point** for insights before visualization.
@@ -309,6 +313,7 @@ ORDER BY r.year, r.fights_count DESC;
 <p align="center">
   <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_8.jpg' >
 </p>
+---
 
 ## **Step 7: Data Visualisation**
 Data visualization on SQL query outputs using Seaborn and Plotly: Seaborn for polished, static charts suited to documentation and reporting; Plotly for interactive, dynamic visuals suited to exploration and presentations. A complementary approach, with Seaborn ensuring reproducibility and Plotly enhancing engagement.
@@ -680,7 +685,6 @@ fig7 = px.line(
 <p align="center">
   <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty7.png' >
 </p>
-
 ---
 
 ## **Key Results & Insights**
