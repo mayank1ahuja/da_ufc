@@ -1,6 +1,6 @@
 ![Project Header](https://github.com/mayank1ahuja/da_ufc/blob/cd7636fe86d984715c6f2dcf15051eea842bc89c/project%20images/project%20header.png)
 
-<h1 align = "center"> UFC Query Lab: SQL Driven Visuals </h2>
+<h1 align = "center"><b></b>UFC Query Lab: SQL Driven Visuals</b></h1>
 
 ## **Project Overview**
 This repository contains a reproducible, end-to-end exploratory analysis using PostgreSQL, pgAdmin4, Python and it's specialized libraries. The analysis ingests multiple CSV files, performs deterministic cleaning and feature engineering, persists cleaned tables to SQL using psycopg2, executes reproducible SQL EDA, and produces matched visualizations using both Seaborn and Plotly to verify and present results.
