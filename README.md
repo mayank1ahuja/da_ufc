@@ -313,7 +313,6 @@ ORDER BY r.year, r.fights_count DESC;
 <p align="center">
   <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/queries/query_8.jpg' >
 </p>
----
 
 ## **Step 7: Data Visualisation**
 Data visualization on SQL query outputs using Seaborn and Plotly: Seaborn for polished, static charts suited to documentation and reporting; Plotly for interactive, dynamic visuals suited to exploration and presentations. A complementary approach, with Seaborn ensuring reproducibility and Plotly enhancing engagement.
@@ -685,7 +684,6 @@ fig7 = px.line(
 <p align="center">
   <img src ='https://github.com/mayank1ahuja/da_ufc/blob/05e668e5f0aa811ebfa438c0b1a0297fdc193186/outputs/plotly%20plots/plty7.png' >
 </p>
----
 
 ## **Key Results & Insights**
 
