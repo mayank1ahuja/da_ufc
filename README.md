@@ -344,7 +344,6 @@ plt.ylabel("Finish Method")
 
 #### Plotly Plot
 ```python
-# Query 2: Distribution of Fighters by Weight Class (Plotly)
 # Query 1: Most Common Finishes (Plotly)
 query1 = """
 SELECT method, 
